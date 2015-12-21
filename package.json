@@ -1,0 +1,30 @@
+{
+  "name": "weakmap-memoize",
+  "version": "0.0.1",
+  "description": "Lightweight memoization with weakmap-shim.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danielnaab/weakmap-memoize.git"
+  },
+  "keywords": [
+    "memoize",
+    "weakmap"
+  ],
+  "author": "Daniel Naab",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/danielnaab/weakmap-memoize/issues"
+  },
+  "homepage": "https://github.com/danielnaab/weakmap-memoize#readme",
+  "dependencies": {
+    "weakmap-shim": "^1.1.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2"
+  }
+}
