@@ -24,5 +24,11 @@ test('simple test', function (assert) {
     assert.equal(myFunction(two), 3)
     assert.equal(times, 2)
 
+    myFunction = memoize(WeakMapShim(), function (obj1, obj2) {
+        return obj1.num + obj2.num
+    })
+
+    assert.equal(myFunction(one, two), 3)
+
     assert.end()
 })

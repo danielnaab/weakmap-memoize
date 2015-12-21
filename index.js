@@ -2,10 +2,10 @@
 
 
 module.exports = function memoize(weakMap, fn) {
-    return function(arg) {
-        if (!weakMap.has(arg)) {
-            weakMap.set(arg, fn(arg))
+    return function () {
+        if (!weakMap.has(arguments[0])) {
+            weakMap.set(arguments[0], fn.apply(null, arguments))
         }
-        return weakMap.get(arg)
+        return weakMap.get(arguments[0])
     }
 }
